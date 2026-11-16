@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Trang báo - Bài tập 10.2</title>
+    <style>
+        /* CSS chỉ để dễ nhìn bố cục, chưa học CSS nên giữ tối giản */
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #222; }
+
+        header { border-bottom: 1px solid #ddd; }
+
+        /* header-top */
+        header > section:nth-of-type(1) {
+            background: #0b3d91; color: #fff; font-size: 13px;
+        }
+        header > section:nth-of-type(1) ul {
+            list-style: none; display: flex; gap: 18px; margin: 0;
+            padding: 6px 20px; align-items: center; flex-wrap: wrap;
+        }
+        header > section:nth-of-type(1) img { height: 24px; }
+
+        /* header-middle */
+        header > section:nth-of-type(2) {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 20px; font-size: 13px;
+        }
+        header > section:nth-of-type(2) ul {
+            list-style: none; display: flex; gap: 14px; margin: 0; padding: 0;
+        }
+
+        /* banner-top */
+        header > section:nth-of-type(3) {
+            background: #f2f2f2; text-align: center; padding: 10px;
+            color: #999; font-size: 12px;
+        }
+
+        /* header-bottom / nav chuyên mục */
+        header > section:nth-of-type(4) nav ul {
+            list-style: none; display: flex; gap: 18px; margin: 0;
+            padding: 10px 20px; background: #b30000;
+        }
+        header > section:nth-of-type(4) nav a {
+            color: #fff; text-decoration: none; font-size: 14px;
+        }
+        header > section:nth-of-type(4) nav a:hover { text-decoration: underline; }
+
+        main { max-width: 1000px; margin: 20px auto; padding: 0 20px; display: flex; gap: 24px; }
+        main > .col-chinh { flex: 2; }
+        main > .col-phu { flex: 1; }
+
+        article.tin-chinh img { width: 100%; height: auto; }
+        article.tin-chinh h2 { font-size: 22px; margin: 10px 0; }
+
+        section.ds-tin h3 { border-bottom: 2px solid #b30000; padding-bottom: 6px; }
+        section.ds-tin ul { list-style: none; margin: 0; padding: 0; }
+        section.ds-tin li { padding: 8px 0; border-bottom: 1px dashed #ddd; }
+        section.ds-tin a { color: #222; text-decoration: none; }
+        section.ds-tin a:hover { color: #b30000; }
+
+        footer { background: #1a1a1a; color: #ccc; margin-top: 30px; font-size: 13px; }
+        footer .footer-icon ul, footer .footer-middle ul {
+            list-style: none; display: flex; gap: 14px; margin: 0; padding: 14px 20px;
+        }
+        footer .footer-bottom { padding: 12px 20px; border-top: 1px solid #333; }
+        footer a { color: #ccc; }
+    </style>
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+
+        <!-- header-top -->
+        <section>
+            <ul>
+                <li><a href="#"><img src="images/logoTTTV.png" alt="Tuổi Trẻ"></a></li>
+                <li>Thứ Ba, 22/09/2026</li>
+                <li>Hotline: 0918.033.133</li>
+                <li><a href="#">Đặt báo</a></li>
+                <li><a href="#">Quảng cáo</a></li>
+                <li><a href="#">Đăng nhập | Đăng ký</a></li>
+            </ul>
+        </section>
+        <!-- end header-top -->
+
+        <!-- header-middle -->
+        <section>
+            <ul>
+                <li><a href="#">Youtube báo Tuổi Trẻ</a></li>
+                <li><a href="#">Cần biết</a></li>
+                <li><a href="#">Nhà đất</a></li>
+            </ul>
+            <div>Tìm kiếm tin tức</div>
+        </section>
+        <!-- end header-middle -->
+
+        <!-- banner-top -->
+        <section>[ Khung quảng cáo - banner-top ]</section>
+        <!-- end banner-top -->
+
+        <!-- header-bottom -->
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Thời sự</a></li>
+                    <li><a href="#">Thế giới</a></li>
+                    <li><a href="#">Pháp luật</a></li>
+                    <li><a href="#">Kinh doanh</a></li>
+                    <li><a href="#">Công nghệ</a></li>
+                    <li><a href="#">Xe</a></li>
+                    <li><a href="#">Du lịch</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- end header-bottom -->
+
+    </header>
+    <!-- end header -->
+
+    <!-- main -->
+    <main>
+
+        <div class="col-chinh">
+            <!-- tin-chính -->
+            <article class="tin-chinh">
+                <img src="images/anh_main.jpg" alt="Ảnh tin chính">
+                <h2>Chủ tịch HĐND TP.HCM: 'Biến nguy thành cơ để phục hồi kinh tế - xã hội'</h2>
+                <p>UBND TP Hà Nội vừa có văn bản chỉ đạo các sở, ngành và quận, huyện
+                khẩn trương triển khai các giải pháp phục hồi sản xuất, kinh doanh trên
+                toàn thành phố.</p>
+                <p>Từ 1-7, khi Hà Nội thí điểm mô hình chính quyền đô thị, các phường sẽ
+                không tổ chức HĐND, áp dụng cho 12 quận và thị xã Sơn Tây.</p>
+            </article>
+            <!-- end tin-chính -->
+        </div>
+
+        <div class="col-phu">
+            <!-- ds-các-tin-mới -->
+            <section class="ds-tin">
+                <h3>Tin mới nhất</h3>
+                <ul>
+                    <li><a href="#">Giá vàng trong nước tăng mạnh phiên đầu tuần</a></li>
+                    <li><a href="#">Dự báo thời tiết TP.HCM tuần này có mưa lớn</a></li>
+                    <li><a href="#">Giao thông cửa ngõ sân bay ùn tắc dịp lễ</a></li>
+                </ul>
+            </section>
+            <!-- end ds-các-tin-mới -->
+
+            <!-- các-tin-khác -->
+            <section class="ds-tin">
+                <h3>Tin khác</h3>
+                <ul>
+                    <li><a href="#">Đội tuyển Việt Nam tập trung chuẩn bị vòng loại</a></li>
+                    <li><a href="#">Học sinh TP.HCM tựu trường năm học mới</a></li>
+                </ul>
+            </section>
+            <!-- end các-tin-khác -->
+        </div>
+
+    </main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <footer>
+
+        <!-- footer-icon -->
+        <section class="footer-icon">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Zalo</a></li>
+                <li><a href="#">RSS</a></li>
+            </ul>
+        </section>
+        <!-- end footer-icon -->
+
+        <!-- footer-middle -->
+        <section class="footer-middle">
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Liên hệ tòa soạn</a></li>
+                <li><a href="#">Quảng cáo</a></li>
+                <li><a href="#">Đặt báo</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+        </section>
+        <!-- end footer-middle -->
+
+        <!-- footer-bottom -->
+        <section class="footer-bottom">
+            <address>
+                Cơ quan chủ quản: Thành Đoàn TP.HCM &mdash;
+                Liên hệ: <a href="#">toasoan@tuoitre.com.vn</a>
+            </address>
+            <p>&copy; 2026 Báo Tuổi Trẻ (minh họa cho mục đích học tập).</p>
+        </section>
+        <!-- end footer-bottom -->
+
+    </footer>
+    <!-- end footer -->
+
+</body>
+</html>

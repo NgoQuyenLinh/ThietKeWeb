@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập 10.1 - Viết lại các đoạn mã trong phần lý thuyết</title>
+</head>
+<body>
+
+    <h1>Bài tập 10.1: Viết lại các đoạn mã trong phần lý thuyết</h1>
+
+    <!-- ============================================= -->
+    <h2>1. Phần tử main</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;body&gt;
+    &lt;header&gt;...&lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;Nội dung chính của trang&lt;/h1&gt;
+        &lt;!-- các nội dung khác --&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>2. Phần đầu (header) - dùng cho toàn trang</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;header&gt;
+    &lt;img src="/images/logo.png"&gt;
+    &lt;h1&gt;Trang blog của Tèo&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Blog&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>3. Phần đầu (header) - dùng bên trong một article</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Tiêu đề bài viết&lt;/h1&gt;
+        &lt;p&gt;người viết Nguyễn Văn Tèo&lt;/p&gt;
+        &lt;p&gt;ngày xuất bản: 11/11/2022&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;...phần nội dung bài viết…&lt;/p&gt;
+&lt;/article&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>4. Phần chân (footer) - trong một article trên blog</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Tiêu đề bài viết&lt;/h1&gt;
+        &lt;p&gt;người viết Nguyễn Văn Tèo&lt;/p&gt;
+        &lt;p&gt;ngày xuất bản: 11/11/2018&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;...phần nội dung bài viết…&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&lt;small&gt;Copyright &amp;copy;2018 Tèo.&lt;/small&gt;&lt;/p&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=""&gt;Previous&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Next&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>5. Phân vùng (section) - cú pháp cơ bản</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;section&gt;
+    &lt;h1&gt;Tên chủ đề&lt;/h1&gt;
+    &lt;p&gt;Nội dung của chủ đề&lt;/p&gt;
+&lt;/section&gt;
+    </pre>
+
+    <h3>Ví dụ: chia sách thành các chương</h3>
+    <pre>
+&lt;section&gt;
+    &lt;h1&gt;Chương 1&lt;/h1&gt;
+    &lt;p&gt;Nội dung của chương 1&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h1&gt;Chương 2&lt;/h1&gt;
+    &lt;p&gt;Nội dung của chương 2&lt;/p&gt;
+&lt;/section&gt;
+    </pre>
+
+    <h3>Ví dụ WWF (từ W3Schools)</h3>
+    <pre>
+&lt;section&gt;
+    &lt;h1&gt;WWF&lt;/h1&gt;
+    &lt;p&gt;The World Wide Fund for Nature (WWF) is an international
+    organization working on issues regarding the conservation, research
+    and restoration of the environment, formerly named the World Wildlife
+    Fund. WWF was founded in 1961.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h1&gt;WWF's Panda symbol&lt;/h1&gt;
+    &lt;p&gt;The Panda has become the symbol of WWF. The well-known panda
+    logo of WWF originated from a panda named Chi Chi that was
+    transferred from the Beijing Zoo to the London Zoo in the same
+    year of the establishment of WWF.&lt;/p&gt;
+&lt;/section&gt;
+    </pre>
+
+    <h3>Ví dụ: liệt kê các bài viết trên blog bằng section</h3>
+    <pre>
+&lt;section&gt;
+    &lt;h2&gt;Tiêu đề bài viết 1&lt;/h2&gt;
+    &lt;p&gt;Trích đoạn của bài viết 1&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Tiêu đề bài viết 2&lt;/h2&gt;
+    &lt;p&gt;Trích đoạn của bài viết 2&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+    &lt;h2&gt;Tiêu đề bài viết 3&lt;/h2&gt;
+    &lt;p&gt;Trích đoạn của bài viết 3&lt;/p&gt;
+&lt;/section&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>6. Bài viết (article)</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;article&gt;
+    &lt;h1&gt;Tiêu đề của bài viết&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Tên tác giả&lt;/li&gt;
+        &lt;li&gt;Thuộc thể loại: Bài viết mới&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Phần nội dung của bài viết&lt;/p&gt;
+&lt;/article&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>7. Article chứa nhiều section</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;article&gt;
+    &lt;h1&gt;Tiêu đề của bài viết&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Tên tác giả&lt;/li&gt;
+        &lt;li&gt;Thuộc thể loại: Bài viết mới&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Mở đầu&lt;/h2&gt;
+        &lt;p&gt;Nội dung của phần mở đầu&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Nội dung 1&lt;/h2&gt;
+        &lt;p&gt;Nội dung 1 của bài viết&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Nội dung 2&lt;/h2&gt;
+        &lt;p&gt;Nội dung 2 của bài viết&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Kết luận&lt;/h2&gt;
+        &lt;p&gt;Nội dung của phần kết luận&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>8. Section chứa nhiều article</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;section&gt;
+    &lt;h2&gt;Các bài viết mới&lt;/h2&gt;
+
+    &lt;article&gt;
+        &lt;h1&gt;Tiêu đề của bài viết 1&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Tên tác giả 1&lt;/li&gt;
+            &lt;li&gt;Thuộc thể loại: Bài viết mới&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Phần nội dung của bài viết 1&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;article&gt;
+        &lt;h1&gt;Tiêu đề của bài viết 2&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Tên tác giả 1&lt;/li&gt;
+            &lt;li&gt;Thuộc thể loại: Bài viết mới&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;Phần nội dung của bài viết 2&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>9. Thông tin bổ trợ (aside)</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;h1&gt;Một số kĩ năng sinh viên nên chuẩn bị&lt;/h1&gt;
+&lt;p&gt;Trong thời gian học tại trường Đại học, các bạn nên trang bị cho
+mình những thứ sau, để khi ra trường có thể tự tin làm việc, và hạnh
+phúc trong công việc.&lt;/p&gt;
+&lt;p&gt;Những thứ các bạn nên để ý là: kiến thức chuyên môn và cuộc sống,
+kĩ năng làm nghề, kĩ năng làm việc, kĩ năng sống; thái độ trong giao
+tiếp, trong công việc và thái độ với nghề mà mình đang theo đuổi.&lt;/p&gt;
+
+&lt;aside&gt;
+    &lt;h2&gt;Một số cuốn sách về định hướng nên đọc&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Khuyến học&lt;/li&gt;
+        &lt;li&gt;Cà phê cùng Tony&lt;/li&gt;
+        &lt;li&gt;Khởi hành&lt;/li&gt;
+        &lt;li&gt;Đúng việc&lt;/li&gt;
+        &lt;li&gt;Trên đường băng&lt;/li&gt;
+        &lt;li&gt;Code dạo ký sự&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>10. Điều hướng (nav)</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt; |
+    &lt;a href="#"&gt;About&lt;/a&gt; |
+    &lt;a href="#"&gt;Blog&lt;/a&gt; |
+    &lt;a href="#"&gt;Sign in&lt;/a&gt;
+&lt;/nav&gt;
+    </pre>
+
+    <!-- ============================================= -->
+    <h2>11. Thông tin liên hệ (address)</h2>
+    <!-- ============================================= -->
+    <pre>
+&lt;address&gt;
+    Đóng góp bởi &lt;a href="../authors/teo/"&gt;Văn Tèo&lt;/a&gt;,
+    &lt;a href="http://www.nhaxuatban.com/"&gt;Nhà Xuất Bản&lt;/a&gt;
+&lt;/address&gt;
+    </pre>
+
+    <hr>
+    <p><em>Ghi chú: các đoạn mã ở trên được đặt trong thẻ &lt;pre&gt; chỉ để hiển thị
+    mã nguồn dạng văn bản (không bị trình duyệt "chạy" thành thẻ HTML thật) — mục
+    đích của bài tập 10.1 là chép/gõ lại đúng cú pháp các ví dụ trong phần lý thuyết.
+    Nếu muốn xem các phần tử này hiển thị và hoạt động thật, hãy bỏ chúng ra khỏi
+    thẻ pre và đặt trực tiếp vào body.</em></p>
+
+</body>
+</html>

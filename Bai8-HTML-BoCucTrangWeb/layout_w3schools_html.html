@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>HTML tutorial</title>
+    <meta name="Keywords" content="HTML, Python, CSS, SQL, How to, PHP">
+    <meta name="Description" content="Well organized and easy to understand Web building tutorials">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* CSS chỉ để dễ nhìn bố cục, chưa học CSS nên giữ tối giản */
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #333; }
+
+        header { background: #04AA6D; color: #fff; padding: 10px 20px; }
+        header .logo { display: flex; align-items: center; gap: 10px; }
+        header .logo svg { width: 40px; height: 40px; }
+        header .logo span { font-size: 22px; font-weight: bold; }
+
+        #pagetop { display: flex; gap: 16px; padding: 8px 0; font-size: 14px; }
+        #pagetop a { color: #fff; text-decoration: none; }
+
+        nav#topnav { background: #04AA6D; }
+        nav#topnav a {
+            display: inline-block; padding: 12px 16px; color: #fff;
+            text-decoration: none; font-size: 15px;
+        }
+        nav#topnav a:hover { background: #04713b; }
+
+        .page-body { display: flex; max-width: 1100px; margin: 0 auto; }
+
+        aside#sidenav {
+            width: 220px; flex-shrink: 0; padding: 16px;
+            border-right: 1px solid #ddd;
+        }
+        aside#sidenav h2 { font-size: 15px; color: #777; }
+        aside#sidenav a {
+            display: block; padding: 6px 0; color: #04AA6D; text-decoration: none;
+        }
+        aside#sidenav a:hover { text-decoration: underline; }
+
+        main { padding: 20px 24px; flex: 1; }
+        main h1 { border-bottom: 3px solid #04AA6D; padding-bottom: 8px; }
+
+        main nav.pager a {
+            color: #04AA6D; text-decoration: none; margin-right: 16px;
+        }
+
+        section.intro article { margin-top: 16px; }
+
+        aside.callout {
+            border-left: 4px solid #04AA6D; background: #f1f1f1;
+            padding: 10px 14px; margin: 20px 0; font-size: 14px;
+        }
+
+        footer {
+            background: #282A35; color: #ccc; padding: 24px;
+            font-size: 13px; margin-top: 20px;
+        }
+        footer address { font-style: normal; }
+        footer a { color: #04AA6D; }
+    </style>
+</head>
+<body>
+
+    <!-- header: gồm logo + pagetop (2 phần tử con), và topnav -->
+    <header>
+        <div class="logo">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="4" fill="#fff"/>
+                <text x="20" y="27" font-size="20" font-weight="bold" fill="#04AA6D" text-anchor="middle">W3</text>
+            </svg>
+            <span>Trang học HTML</span>
+        </div>
+
+        <div id="pagetop">
+            <a href="#">Tutorials</a>
+            <a href="#">References</a>
+            <a href="#">Exercises</a>
+            <a href="#">Videos</a>
+            <a href="#">Log in</a>
+            <a href="#">Get Certified</a>
+        </div>
+    </header>
+
+    <nav id="topnav">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">SQL</a>
+        <a href="#">Python</a>
+        <a href="#">PHP</a>
+    </nav>
+
+    <div class="page-body">
+
+        <!-- aside: thanh bên chứa danh sách bài học, liên quan nhưng phụ trợ so với nội dung chính -->
+        <aside id="sidenav">
+            <h2>HTML Tutorials</h2>
+            <a href="#">HTML HOME</a>
+            <a href="#">HTML Introduction</a>
+            <a href="#">HTML Editors</a>
+            <a href="#">HTML Basic</a>
+            <a href="#">HTML Elements</a>
+            <a href="#">HTML Attributes</a>
+            <a href="#">HTML Headings</a>
+            <a href="#">HTML Paragraphs</a>
+        </aside>
+
+        <!-- main: vùng nội dung chính, chỉ xuất hiện một lần trên trang -->
+        <main>
+            <h1>HTML Tutorial</h1>
+
+            <nav class="pager">
+                <a href="#">&lt; Home</a>
+                <a href="#">Next &gt;</a>
+            </nav>
+
+            <section class="intro">
+                <article>
+                    <p>HTML is the standard markup language for Web pages.</p>
+                    <p>With HTML you can create your own Website.</p>
+                    <p>HTML is easy to learn - You will enjoy it!</p>
+                    <a href="#">Study our free HTML Tutorial &raquo;</a>
+                </article>
+
+                <aside class="callout">
+                    <p><strong>Ghi chú:</strong> khối này minh họa phần tử <code>aside</code>
+                    dùng để chứa thông tin bổ trợ, không phải nội dung chính.</p>
+                </aside>
+
+                <article>
+                    <h2>Ví dụ HTML</h2>
+                    <p>Với trình soạn thảo HTML trực tuyến, bạn có thể chỉnh sửa mã HTML và xem kết quả ngay trong trình duyệt.</p>
+                    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- footer: thông tin cuối trang, chứa address để liên hệ tác giả -->
+    <footer>
+        <p>W3Schools is optimized for learning and training. Examples might be simplified
+        to improve reading and learning. Tutorials, references, and examples are constantly
+        reviewed to avoid errors, but we cannot warrant full correctness of all content.
+        While using W3Schools, you agree to have read and accepted our
+        <a href="#">cookie and privacy policy</a>.</p>
+
+        <address>
+            Bài tập bởi <a href="#">sinh viên</a> — phỏng theo
+            <a href="https://www.w3schools.com/html/default.asp">w3schools.com/html</a>
+        </address>
+    </footer>
+
+</body>
+</html>
