@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nền cam đỏ đặc trưng của thanh header */
+.header {
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    color: #fff;
+    padding: 8px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Dàn hàng ngang 2 bên trái - phải */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-left a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Danh sách menu bên phải */
+.navbar-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s;
+}
+
+/* Hiệu ứng mờ nhẹ khi di chuột vào */
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.icon-small {
+    font-size: 10px;
+}
+
+/* In đậm chữ Đăng Ký và Đăng Nhập */
+.nav-item--strong .nav-link {
+    font-weight: 600;
+}
+
+/* Tạo vạch ngăn cách dọc giữa Đăng Ký và Đăng Nhập */
+.nav-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    height: 14px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
